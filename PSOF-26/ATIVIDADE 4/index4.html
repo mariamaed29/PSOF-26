@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Menu Flexbox</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* elemento pai */
+nav{
+    background-color:#333;
+}
+
+/* lista do menu */
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+
+    display:flex;                /* FLEXBOX */
+    justify-content:center;      /* alinhamento horizontal */
+    align-items:center;          /* alinhamento vertical */
+}
+
+/* itens do menu */
+li{
+    margin:0 15px;
+}
+
+/* links */
+a{
+    text-decoration:none;
+    color:white;
+    padding:15px 20px;
+    display:block;
+    transition:0.3s;
+}
+
+/* efeito ao passar o mouse */
+a:hover{
+    background-color:#555;
+    border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Empresa</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

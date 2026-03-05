@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Análise de Sentimentos</title>
+
+<style>
+/* Organização e Box Model */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.entrada-texto {
+    padding: 10px;
+    min-height: 100px;
+    border: 1px solid #aaa;
+}
+
+.entrada-texto:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn-analisar {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-analisar:hover {
+    background-color: #0056b3;
+}
+
+.btn-analisar:active {
+    transform: scale(0.98);
+}
+
+.resultado {
+    padding: 15px;
+    border-left: 5px solid gray;
+}
+
+.positivo { border-left-color: green; background: #e8f5e9; }
+.negativo { border-left-color: red; background: #ffebee; }
+.neutro { border-left-color: gray; background: #f5f5f5; }
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<main class="container">
+<h1>Análise de Sentimentos</h1>
+
+<textarea placeholder="Digite seu texto aqui..." class="entrada-texto"></textarea>
+
+<button class="btn-analisar">Analisar Sentimento</button>
+
+<div class="resultado neutro">
+Resultado: Aguardando análise...
+</div>
+
+</main>
+
+<script>
+
+const botao = document.querySelector(".btn-analisar");
+const texto = document.querySelector(".entrada-texto");
+const resultado = document.querySelector(".resultado");
+
+botao.addEventListener("click", function() {
+
+let frase = texto.value.toLowerCase();
+
+let palavrasPositivas = ["bom","ótimo","feliz","maravilhoso","gostei","legal","excelente"];
+let palavrasNegativas = ["ruim","péssimo","triste","horrível","odiei","terrível","pior"];
+
+let positivo = 0;
+let negativo = 0;
+
+palavrasPositivas.forEach(palavra=>{
+    if(frase.includes(palavra)){
+        positivo++;
+    }
+});
+
+palavrasNegativas.forEach(palavra=>{
+    if(frase.includes(palavra)){
+        negativo++;
+    }
+});
+
+resultado.classList.remove("positivo","negativo","neutro");
+
+if(positivo > negativo){
+    resultado.classList.add("positivo");
+    resultado.innerHTML = "Resultado: Sentimento Positivo 😊";
+}
+else if(negativo > positivo){
+    resultado.classList.add("negativo");
+    resultado.innerHTML = "Resultado: Sentimento Negativo 😞";
+}
+else{
+    resultado.classList.add("neutro");
+    resultado.innerHTML = "Resultado: Sentimento Neutro 😐";
+}
+
+});
+
+</script>
+
+</body>
+</html>

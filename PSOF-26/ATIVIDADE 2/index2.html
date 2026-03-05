@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Box Model - Produtos</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Container para organizar os produtos */
+.container{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Blocos de produtos */
+.produto{
+    width: 200px;              /* largura fixa */
+    height: 150px;             /* altura */
+    border: 3px solid black;   /* borda visível */
+    padding: 20px;             /* espaço interno */
+    margin: 20px auto;         /* espaço externo + centralização */
+    background-color: lightblue;
+}
+
+/* cores diferentes para visualizar */
+.produto2{
+    background-color: lightgreen;
+}
+
+.produto3{
+    background-color: lightcoral;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+    <div class="produto">
+        <h3>Produto 1</h3>
+        <p>Descrição do produto.</p>
+    </div>
+
+    <div class="produto produto2">
+        <h3>Produto 2</h3>
+        <p>Descrição do produto.</p>
+    </div>
+
+    <div class="produto produto3">
+        <h3>Produto 3</h3>
+        <p>Descrição do produto.</p>
+    </div>
+
+</div>
+
+<!-- 
+Diferença prática:
+Margin é o espaço externo entre um elemento e outros elementos da página.
+Padding é o espaço interno entre o conteúdo do elemento e sua borda.
+-->
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CABEÇALHO */
+header{
+    background-color: #0d47a1; /* HEX */
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+header p{
+    font-size: 18px;
+}
+
+/* SEÇÃO PRINCIPAL */
+main{
+    background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px;
+    text-align: center;
+    color: rgb(255,255,255); /* RGB */
+}
+
+main h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+main p{
+    font-size: 18px;
+}
+
+/* RODAPÉ */
+footer{
+    background-color: rgb(30,30,30); /* RGB */
+    color: #ffffff; /* HEX */
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}

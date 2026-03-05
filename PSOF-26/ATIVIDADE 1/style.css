@@ -1,0 +1,38 @@
+/* Seletor por elemento */
+h1{
+    color: darkblue;
+    text-align: center;
+}
+
+/* Seletor por elemento */
+h2{
+    color: rgb(0, 73, 100);
+}
+
+/* Seletor por elemento */
+p{
+    font-size: 16px;
+}
+
+/* Seletor por classe */
+.destaque{
+    background-color: rgb(0, 55, 255);
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Seletor por id */
+#subtitulo-destaque{
+    color: rgb(0, 136, 255);
+}
+
+/*
+Prioridade dos seletores no CSS:
+
+1º #id (maior prioridade)
+2º .classe
+3º elemento
+
+O seletor de ID possui maior prioridade porque ele é único na página,
+enquanto classes e elementos podem ser usados várias vezes.
+*/
